@@ -3,8 +3,8 @@ import axios from 'axios';
 axios.defaults.baseURL = 'http://goit-phonebook-api.herokuapp.com';
 
 export async function fetchContacts() {
-  const { meta } = await axios.get(`/contacts`);
-  return meta;
+  const { data } = await axios.get(`/contacts`);
+  return data;
 }
 
 export function fetchDeleteContactById(id) {

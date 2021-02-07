@@ -13,13 +13,16 @@ export default function AppBar() {
         <NavLink exact to="/" className={s.link} activeClassName={s.activeLink}>
           Home
         </NavLink>
-        <NavLink
-          to="/contacts"
-          className={s.link}
-          activeClassName={s.activeLink}
-        >
-          Phonebook
-        </NavLink>
+        {isLoggedIn && (
+          <NavLink
+            to="/contacts"
+            className={s.link}
+            activeClassName={s.activeLink}
+          >
+            Phonebook
+          </NavLink>
+        )}
+
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </header>
       <hr></hr>

@@ -18,6 +18,6 @@ export const deleteContact = createAsyncThunk(
 );
 
 export const fetchAllContacts = createAsyncThunk('/contacts', async () => {
-  const { arg } = await contactsAPI.fetchContacts();
-  return arg;
+  const data = await contactsAPI.fetchContacts();
+  return data;
 });
