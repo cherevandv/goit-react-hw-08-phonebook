@@ -43,4 +43,22 @@ export const logOut = createAsyncThunk('auth/logout', async () => {
   }
 });
 
+export const fetchCurrentUser = createAsyncThunk(
+  'auth/refresh',
+  async (_, thunckAPI) => {
+    const state = thunckAPI.getState();
+    const persistedToken = state.auth.token;
+    if (persistedToken === null) {
+      return thunckAPI.rejectWithValue();
+    }
+    try {
+      useToken.set(persistedToken);
+      const { data } = await axios.get('/users/current');
+      return data;
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+);
+
 // export default { register, login, logOut };

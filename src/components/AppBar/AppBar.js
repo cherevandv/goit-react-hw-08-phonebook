@@ -9,7 +9,7 @@ export default function AppBar() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <>
-      <nav className={s.nav}>
+      <header className={s.nav}>
         <NavLink exact to="/" className={s.link} activeClassName={s.activeLink}>
           Home
         </NavLink>
@@ -21,7 +21,7 @@ export default function AppBar() {
           Phonebook
         </NavLink>
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
-      </nav>
+      </header>
       <hr></hr>
     </>
   );

@@ -1,7 +1,7 @@
 import { useEffect, lazy, Suspense } from 'react';
 import { useDispatch } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
-import { operations } from './redux';
+import { authOperations } from './redux/auth';
 import AppBar from 'components/AppBar';
 import HomeView from 'views/HomeView';
 import RegisterView from 'views/RegisterView';
@@ -24,11 +24,11 @@ import s from 'App.module.css';
 // );
 
 function App() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(operations.fetchAllContacts());
-  // }, []);
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, []);
 
   return (
     <>
