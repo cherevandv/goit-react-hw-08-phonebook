@@ -5,7 +5,7 @@ import { operations } from '../redux';
 import ContactForm from 'components/ContactForm';
 import Filter from 'components/Filter';
 import ContactList from 'components/ContactList';
-import s from './PhonebookView.module.css';
+import s from './Views.module.css';
 
 function PhonebookView() {
   const dispatch = useDispatch();

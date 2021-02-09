@@ -1,11 +1,15 @@
 .nav {
   padding: 18px 40px;
+  height: 76px;
+  display: flex;
+  align-items: center;
 }
 .link {
-  margin-right: 20px;
+  display: flex;
+  margin: 0;
   text-decoration: none;
   font-size: 20px;
 }
 .activeLink {
-  color: #d30707;
+  color: #702bb1;
 }

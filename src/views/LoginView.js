@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
 import s from './Views.module.css';
 
 export default function LoginView() {
@@ -38,7 +37,7 @@ export default function LoginView() {
   };
 
   return (
-    <>
+    <div className={s.container}>
       <h1>Login view</h1>
       <form className={s.form} onSubmit={handleSubmit}>
         <label className={s.label} htmlFor="">
@@ -65,6 +64,6 @@ export default function LoginView() {
           Enter
         </button>
       </form>
-    </>
+    </div>
   );
 }

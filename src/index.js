@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
 import App from './App';
 import { store, persistor } from './redux/store';
 import 'modern-normalize/modern-normalize.css';
@@ -13,7 +15,10 @@ ReactDOM.render(
     <Provider store={store}>
       <PersistGate loading={<p>Loading...</p>} persistor={persistor}>
         <BrowserRouter>
-          <App />
+          <CssBaseline />
+          <Container maxWidth="sm">
+            <App />
+          </Container>
         </BrowserRouter>
       </PersistGate>
     </Provider>

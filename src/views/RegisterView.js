@@ -42,7 +42,7 @@ export default function RegisterView() {
   };
 
   return (
-    <>
+    <div className={s.container}>
       <h1>Register view</h1>
       <form className={s.form} onSubmit={handleSubmit}>
         <label className={s.label} htmlFor="">
@@ -79,6 +79,6 @@ export default function RegisterView() {
           Add new user
         </button>
       </form>
-    </>
+    </div>
   );
 }
