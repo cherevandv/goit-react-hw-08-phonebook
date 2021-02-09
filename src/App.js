@@ -6,7 +6,6 @@ import PublicRoute from 'route/PublicRoute';
 import PrivateRoute from 'route/PrivateRoute';
 import AppBar from 'components/AppBar';
 import Loader from 'react-loader-spinner';
-import s from 'App.module.css';
 
 const HomeView = lazy(() =>
   import('views/HomeView' /*webpackChunkName: "home-page" */),

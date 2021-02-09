@@ -1,8 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { authOperations, authSelectors } from 'redux/auth';
 import { Grid } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import IconButton from '@material-ui/core/IconButton';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import defaultAvatar from './default-avatar.png';
@@ -14,7 +12,6 @@ export default function UserMenu() {
   const avatar = defaultAvatar;
   return (
     <Grid
-      item
       container
       item
       xs={6}
